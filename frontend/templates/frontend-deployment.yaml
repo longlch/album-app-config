@@ -20,7 +20,7 @@ spec:
         image: {{ printf "%s:%s" .Values.image.repository .Values.image.tag }}
         env:
         - name: BACKEND_URL
-          value: {{ .Values.backend.serviceName }}
+          value: {{  printf "http://%s:%v" .Values.backend.serviceName .Values.backend.servicePort }}
         ports:
         - containerPort: {{ .Values.image.containerPort }}
         resources:

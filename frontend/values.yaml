@@ -13,3 +13,4 @@ image:
 
 backend:
   serviceName: album-app-backend
+  servicePort: 8080
