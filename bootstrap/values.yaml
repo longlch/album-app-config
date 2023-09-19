@@ -1,0 +1,33 @@
+
+# Projects
+projects:
+  albumApp:
+    name: album-app
+    description: Album App
+    cluster: https://kubernetes.default.svc
+    namespace: album-app
+    repo: 
+      - https://github.com/krishanthisera/album-app-config
+
+# Album App
+apps:
+  albumApp:
+    frontend:
+      name: album-app-frontend
+      namespace: album-app
+      project: album-app
+      repo: https://github.com/krishanthisera/album-app-config
+      path: frontend
+      targetRevision: HEAD
+    backend:
+      name: album-app-backend
+      namespace: album-app
+      project: album-app
+      repo: https://github.com/krishanthisera/album-app-config
+      path: frontend
+      targetRevision: HEAD
+
+# ArgoCD configuration
+argocd:
+  cluster: https://kubernetes.default.svc
+  namespace: argocd

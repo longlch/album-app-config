@@ -1,0 +1,19 @@
+{{- range $k, $v := .Values.apps.albumApp }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name:  {{ printf "album-app-%s" $k }}
+  namespace: {{ $.Values.argocd.namespace }}
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: {{ $v.namespace }}
+    server: {{ $.Values.argocd.cluster }}
+  project: {{ $v.project }}
+  source:
+    path: {{ $v.path }}
+    repoURL: {{ $v.repoURL }}
+    targetRevision: {{ $v.targetRevision }}
+{{- end }}
