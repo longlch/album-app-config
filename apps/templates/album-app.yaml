@@ -14,6 +14,6 @@ spec:
   project: {{ $v.project }}
   source:
     path: {{ $v.path }}
-    repoURL: {{ $v.repoURL }}
+    repoURL: {{ $v.repo }}
     targetRevision: {{ $v.targetRevision }}
 {{- end }}
