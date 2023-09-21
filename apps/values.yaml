@@ -17,14 +17,14 @@ apps:
       namespace: album-app
       project: album-app
       repo: https://github.com/krishanthisera/album-app-config
-      path: frontend
+      path: apps/frontend
       targetRevision: HEAD
     backend:
       name: album-app-backend
       namespace: album-app
       project: album-app
       repo: https://github.com/krishanthisera/album-app-config
-      path: frontend
+      path: apps/backend
       targetRevision: HEAD
 
 # ArgoCD configuration
