@@ -1,0 +1,9 @@
+argoProject:
+ name: default
+ description: Album App
+ cluster: https://kubernetes.default.svc
+ destNamespace: album-app
+src:
+   repoUrl: https://github.com/krishanthisera/album-app-config
+   targetRevision: HEAD
+   path: /apps
