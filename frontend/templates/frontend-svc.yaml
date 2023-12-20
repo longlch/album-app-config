@@ -6,7 +6,6 @@ metadata:
 spec:
   selector:
     app: {{ .Chart.Name }}
-    version: {{ .Values.image.tag }}
   ports:
     - protocol: TCP
       port: 80
