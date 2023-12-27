@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/krishanthisera/album-app-backend
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "v1.3.2"
   containerPort: 8080
 
 
