@@ -1,5 +1,5 @@
 apiVersion: v2
-name: bootstrap
+name: apps
 description: ArgoCD applications
 
 # A chart can be either an 'application' or a 'library' chart.
