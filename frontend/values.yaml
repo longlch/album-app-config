@@ -17,4 +17,4 @@ backend:
 
 service: 
   name: album-app-frontend
-  servicePort: 80
+  port: 80
