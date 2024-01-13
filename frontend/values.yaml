@@ -11,6 +11,10 @@ image:
   tag: "v1.3.3"
   containerPort: 3000
 
+backend:
+  serviceName: album-app-backend
+  servicePort: 8080
+
 service: 
   name: album-app-frontend
   servicePort: 80
