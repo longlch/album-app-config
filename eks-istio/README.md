@@ -42,8 +42,7 @@ metadata:
   name: album-app
   region: ap-southeast-2
   version: "1.27"
-  tags:
-    karpenter.sh/discovery: aligent-apps
+
 
 availabilityZones:
 - ap-southeast-2a
@@ -75,5 +74,7 @@ managedNodeGroups:
 ```
 
 **Install ISTIO:** <https://ISTIO.io/latest/docs/setup/getting-started/#download>
+
 **Install Cert Manager:** <https://cert-manager.io/docs/installation/>
+
 **Install AWS Load Balancer Controller:** <https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/deploy/installation/>
