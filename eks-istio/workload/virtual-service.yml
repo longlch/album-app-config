@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: app-ingress-rules
+  namespace: album-app
+spec:
+  hosts:
+  - "album-app.bizkt.com.au"
+  gateways:
+  - album-app-gw
+  http:
+  - route:
+    - destination:
+        port:
+          number: 80
+        host: album-app-frontend.album-app.svc.cluster.local
+
