@@ -1,0 +1,14 @@
+{{- range $k,$v := .Values.projects }}
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: {{ $v.name }}
+  namespace: {{ $.Values.argocd.namespace }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+spec:
+  sourceRepos: {{ $v.repo | toYaml | nindent 2 }}
+  destinations:
+  - namespace: {{ $v.namespace }}
+    server: {{ $v.cluster}}
+{{- end }}
